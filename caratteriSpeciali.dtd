@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ENTITY Egrave "È">
+<!ENTITY egrave "è" >
+<!ENTITY eacuta "é" >
+<!ENTITY iacuta "í">
+<!ENTITY igrave "ì" >
+<!ENTITY apostr "’" >
+<!ENTITY agrave "à" >
+<!ENTITY uacuta "ú" >
+<!ENTITY ugrave "ù" >
+<!ENTITY ograve "ò" >
+<!ENTITY emdash "—" >

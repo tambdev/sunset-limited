@@ -1,0 +1,2352 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=0.8">
+      <title>Progetto Codifica di Testi Tambellini Stefano</title>
+      <link rel="shortcut icon" type="image/png" href="icon.png">
+      <link rel="icon" type="image/png" href="icon.png">
+      <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+      <link rel="stylesheet" href="node_modules/skeleton-css/css/skeleton.css">
+      <link rel="stylesheet" href="node_modules/hover.css/css/hover-min.css">
+      <link rel="stylesheet" href="node_modules/alertifyjs/build/css/alertify.min.css">
+      <link rel="stylesheet" href="node_modules/alertifyjs/build/css/themes/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="node_modules/fullpage.js/dist/jquery.fullpage.min.css">
+      <link rel="stylesheet" type="text/css" href="style.css">
+   </head>
+   <body><img id="loader" fill="#030303" width="140" height="64" viewBox="0 0 140 64" src="tail-spin.svg"><div id="fullpage">
+         <div class="home section"><button id="infoButton" class="hvr-back-pulse">?</button><div id="infoBox">
+               <h4>Per navigare usare la rotellina e le frecce da computer, oppure lo swipe da
+                  mobile.
+               </h4>
+               <hr>
+               <div class="inline">Progetto del corso di Codifica di Testi tenuto all’Università di
+                  Pisa. Edizione di lettura con impaginazione grafica. Codifica accurata basilare con
+                  accorgimenti sull'XML nei riguardi di caratteri
+                  speciali, correzioni nell'edizione fisica e semantiche (oltre che ovviamente
+                  strutturali).<br><i>Edizione n. 1, L’Arcipelago<br> Collana ET einaudi tascabili scrittori - 1598<br><em> ISBN: 978-88-06-20159-3</em></i><br><small><i>© 2008 e 2010 Giulio Einaudi Editore s.p.a., Torino</i></small></div>
+               <div class="inline">
+                  <table>
+                     <tr>
+                        <td>2 gennaio 2017</td>
+                        <td>Codifica XML del documento e impostazione cartella del progetto.</td>
+                     </tr>
+                     <tr>
+                        <td>3 gennaio 2017</td>
+                        <td>Stilizzazione XSLT e CSS del documento HTML risultante.</td>
+                     </tr>
+                     <tr>
+                        <td>4 gennaio 2017</td>
+                        <td>Correzione generale sito risultante e codifica.</td>
+                     </tr>
+                     <tr>
+                        <td>5 gennaio 2017</td>
+                        <td>Aggiunta di librerie grafiche tramite npm e font più leggibile.</td>
+                     </tr>
+                     <tr>
+                        <td>6 gennaio 2017</td>
+                        <td>Sostituzione dei xsl:for-each con xsl:template e correzione errori vari.</td>
+                     </tr>
+                     <tr>
+                        <td>7 gennaio 2017</td>
+                        <td>Completamento della codifica e miglioramento navigazione e
+                           responsività/usabilità.
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>8 gennaio 2017</td>
+                        <td>Ultimi accorgimenti e correzioni.</td>
+                     </tr>
+                     <tr>
+                        <td>15 gennaio 2017</td>
+                        <td>Rimozione dei pb e suddivisione del testo in maniera appropriata tra una
+                           pagina e l'altra. Aggiunta funzione di evidenziazione del testo.
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <h1><strong>Sunset Limited</strong></h1>
+            <h3>Cormac McCarty</h3>
+            <h6>Traduzione: Martina Testa</h6>
+            <h5> Pubblicato da Einaudi<br>Torino, 2008
+            </h5>
+            <hr>
+            <h3>Conversione in XHTML/TEI: Stefano Tambellini</h3>
+         </div>
+         <div class="pages section">
+            <div id="evidenziatore"><label><input type="radio" name="radioEvidenz" value="bianco">Bianco</label><label><input type="radio" name="radioEvidenz" value="nero">Nero</label><button id="clearEvidenz">Pulisci</button></div>
+            <div class="slide">3
+               <hr>
+               <div class="stage"><small><i> La scena si svolge in una stanza di un caseggiato popolare in
+                        un quartiere nero di New York. C’è una cucina con dei fornelli e
+                        un grosso frigorifero. Una porta che dà sul pianerottolo e
+                        un’altra presumibilmente dà sulla camera da letto. La prima
+                        è dotata di una bizzarra serie di spranghe e chiavistelli. Nella stanza
+                        c’è un tavolo di formica da quattro soldi con due sedie di metallo
+                        e plastica. Il tavolo ha un cassetto. Sul tavolo ci sono una Bibbia e un
+                        giornale. Un paio di occhiali. Un taccuino e una matita. Su una delle due sedie
+                        (quella di destra) è seduto un nero corpulento, sull’altra un
+                        bianco di mezza età con un paio di pantaloni della tuta e scarpe da
+                        ginnastica. Ha indosso una T-shirt, mentre la giacca — che fa un paio con
+                        i pantaloni — è appesa dietro di lui allo schienale della sedia. </i></small></div>
+               <table>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Allora, professore, che devo fare con te?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Perché dovrebbe fare qualcosa?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Te l’ho detto. Io non c’entro niente. Quando stamattina
+                        sono uscito di casa per andare a lavoro tu mica c’eri nei miei
+                        programmi. E invece eccoti qua.
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            <div class="slide">4
+               <hr>
+               <table>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non significa nulla. Niente di quello che succede significa
+                        qualcos’altro.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Mm hm. No eh?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>No, infatti.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>E allora che significa?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non significa nulla. Capita di incontrare delle persone e capita che
+                        qualcuna di queste sia nei guai per un motivo o per l’altro, ma
+                        non significa che dobbiamo assumercene la responsabilità.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Mm hm.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>E comunque, chi è sempre pronto a occuparsi dei perfetti
+                        sconosciuti molto spesso non si occupa delle persone di cui dovrebbe
+                        occuparsi. Per come la vedo io. Se uno si lita a fare ciò che
+                        dovrebbe, non diventa un eroe
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>E io sarei un tipo così.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non lo so. È un tipo così?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Be’, ci può anche essere un fondo di verità in
+                        quello che dici, non dico di no. Ma in questo caso specifico,
+                        sta’ sicuro che io non sapevo proprio di che tipo di persona mi
+                        dovevo occupare, o cosa fare quando a trovavo. In questo caso specifico,
+                        mi sono basato su una cosa sola
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>E cioè?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Cioè sul fatto che vedo un tizio lassù in piedi. Lo guardo
+                        e posso pure dire: Mah, a prima vista non-
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            <div class="slide">5
+               <hr>
+               <table>
+                  <tr>
+                     <td class="speaker"></td>
+                     <td>-sembra mio fratello. Però sta lì. Forse è il caso che lo guardo meglio.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>E così ha fatto.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Be’, era un po’ difficile far finta di niente. Fammi dire
+                        che il tuo approccio è stato un bel po’ diretto.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non è stato un approccio. Non l’avevo neanche vista.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Mh hm.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Adesso è meglio che me ne vada. Sto cominciando a darle sui
+                        nervi.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>No, non è vero. Non farci caso a me. Sembri uno a posto,
+                        professore. In realtà quello che non capisco è come hai
+                        fatto a metterti in un casino del genere.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Eh già.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Ti senti bene? Hai dormito, stanotte?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>No.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Quando hai deciso che oggi era il gran giorno? Cos’è, ha
+                        qualcosa di speciale?
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>No. Be’, guardi. Oggi è il mio compleanno. Ma che reputi la
+                        cosa speciale, proprio no.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Allora buon compleanno, professore.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Grazie.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Insomma, hai visto che stava arrivando il tuo compleanno e hai pensato
+                        che era il giorno più adatto.
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            <div class="slide">6
+               <hr>
+               <table>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Chi lo sa. Magari i compleanni sono pericolosi. Come il Natale.
+                        Decorazioni sugli alberi, ghirlande sulle porte, e cadaveri che
+                        penzolano dai soffitti di tutta l’America.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Mm. Il che non depone molto a favore del Natale, giusto?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Il Natale non è più quello di una volta.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Su questo ti do senz’altro ragione. Al cento per cento.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Adesso devo andare.</td>
+                  </tr>
+               </table>
+               <div class="stage"><small><i>Si alza e prende la giacca dallo schienale della sedia, se la mette sopra le
+                        spalle e poi ficca tutte e due le braccia nelle maniche, invece di infilarsela
+                        una manica per volta. </i></small></div>
+               <table>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>T’infili sempre le giacche in quel modo?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Cos’ha che non va il modo in cui mi infilo una giacca?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Non ho detto che ha qualcosa che non va. Volevo solo sapere se è
+                        il metodo che usi sempre.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non è che abbia un metodo, me la infilo e basta.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Mm hm.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Che c’è, è da effeminati?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Mm.</td>
+                  </tr>
+               </table>
+            </div>
+            <div class="slide">7
+               <hr>
+               <table>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Che?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Niente. Me ne sto solo qua seduto a studiare il comportamento dei
+                        professori.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Sì. Be’, adesso me ne devo andare.</td>
+                  </tr>
+               </table>
+               <div class="stage"><small><i> Il nero si alza. </i></small></div>
+               <table>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Ok. Aspetta che prendo la giacca.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>La giacca?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Sì.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Dove va?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Vengo con te.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>In che senso? Viene con me dove?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Vengo con te nel posto dove stai andando.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>No che non viene.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Sì invece.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Ma io sto tornando a casa.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Benissimo.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Benissimo? Guardi che lei non ci viene a casa mia.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Eccome se ci vengo. Aspetta che prendo la giacca.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Ma non può venire a casa mia.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Perché no?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Perché no.</td>
+                  </tr>
+               </table>
+            </div>
+            <div class="slide">8
+               <hr>
+               <table>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Come sarebbe? Tu puoi venire a casa mia e io non posso venire a casa
+                        tua?
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>No. Cioè, no, non è questo. È solo che voglio
+                        tornarmene a casa.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Abiti in un palazzo col portiere?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Sì.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>E allora? I neri non possono entrare?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>No. Cioè, certo che possono entrare. Senta. Basta con questi
+                        giochetti. Devo andare. Sono molto stanco.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Be’, spero che non ci piantano grande quando vedono che salgo con
+                        te.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Dice sul serio?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Eddai che l’hai capito. Sì che dico sul serio.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non può dire sul serio.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Serio come un attacco al cuore</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Perché sta facendo tutto questo?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Io? Io non ho nessuna scelta.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Certo che ce l’ha.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>No invece.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Chi l’ha nominata mio angelo custode?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Aspetta che prendo la giacca.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Risponda alla domanda.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Tu <i>lo sai</i> chi è stato. Non te lo mica chie-
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            <div class="slide">9
+               <hr>
+               <table>
+                  <tr>
+                     <td class="speaker"></td>
+                     <td>-sto io di saltarmi in braccio stamattina mentre aspettavo la metro.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non le sono saltato in braccio.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Ah no?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>No.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>E allora come hai fatto ad arrivarci?</td>
+                  </tr>
+               </table>
+               <div class="stage"><small><i>Il professore resta in piedi a testa china. Guarda la sedia e poi si volta e
+                        ci si va a sedere di nuovo. </i></small></div>
+               <table>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Be’? Non usciamo più?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Lei pensa davvero che in questa stanza ci sia Gesù?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>No. Non lo penso.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Ah no?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td><i>Lo so</i> che c’è Gesù in questa stanza
+                     </td>
+                  </tr>
+               </table>
+               <div class="stage"><small><i>Il professore congiunge le mani sul tavolo e china la testa. Il nero prende
+                        l’altra sedia e si risiede. </i></small></div>
+               <table>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Tutto sta in come uno lo dice, professore. È come se ti chiedo se
+                        <i>pensi</i> di avere addosso quella giacca. Capisci cosa
+                        intendo?
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non è la stessa cosa. È una questione di consenso generale.
+                        Se io e lei diciamo che ho addosso una giacca e Cecil dice che sono nudo e-
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            <div class="slide">10
+               <hr>
+               <table>
+                  <tr>
+                     <td class="speaker"></td>
+                     <td>-ho la pelle verde e la coda, allora ci conviene pensare a un posto dove
+                        ricoverare Cecil, per il suo bene?
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>E chi è Cecil?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non è nessuno. È solo un personaggio che ho inventato per
+                        spiegarmi meglio.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Inventato.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Sì.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Mm.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non vorrà mica ricominciare, eh? Non è la stessa cosa. Il
+                        fatto che ho inventato Cecil.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Però l’ha inventato.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Sì.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>E il suo modo di vedere le cose non conta niente.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Esatto. È per questo che l’ho inventato. Ma avrei anche
+                        potuto metterla in un altro modo, avrei potuto dire che era lei quello
+                        convinto che non avessi la giacca.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>E che era verde, e cazzi vari.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Sì</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Però mica hai detto così.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>No.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Hai scaricato tutto su Cecil.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Sì.</td>
+                  </tr>
+               </table>
+            </div>
+            <div class="slide">11
+               <hr>
+               <table>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Ma Cecil non si può difendere, perché dato che non è d’accordo con tutti gli altri,
+                        quello che dice lui non vale niente. A parte poi il fatto che te lo sei
+                        inventato tu, che è verde e tutto il resto.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non è lui, quello verde. Sono io. Ma dove vuole andare a
+                        parare?
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Sto solo cercando di capire meglio questo Cecil.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non mi pare proprio. Lei lo vede, Gesù?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>No. Non lo vedo.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Però ci parla.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Ogni santo giorno.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>E lui parla con lei.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Mi ha parlato. Sì.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Ma lei lo sente? Sente proprio la sua voce?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>No, non sento la sua voce. Non sento neanche la mia, se è per
+                        questo. A lui però l’ho sentito.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Be’, allora Gesù non potrebbe essere soltanto nella sua
+                        testa?
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Infatti <i>è</i> nella mia testa.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Allora non capisco cos’è che sta cercando di dirmi.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Lo so che non capisci, zuccherino. Sta’ a sentire. La prima cosa
+                        che devi tenere presente-
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            <div class="slide">12
+               <hr>
+               <table>
+                  <tr>
+                     <td class="speaker"></td>
+                     <td>-è che io, nella testa, non ho manco un pensiero originale. Se non
+                        ha dentro la scia del profumo della divinità, allora non mi
+                        interessa.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>La scia del profumo della divinità.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Esatto. Che te ne pare?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non è male.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>L’ho sentito alla radio. Da un predicatore nero. Ma il punto
+                        è che ci ho anche provato a fare nell’altro modo. E mica a
+                        spizzichi e bocconi, eh. Dico proprio benda sugli occhi, briglia sciolta
+                        e via a correre in mezzo ai boschi. Oddio. Ci ho provato eccome. Se
+                        trovi un cristiano che ci ha provato più di me, mi piacerebbe conoscerlo. Mi piacerebbe davvero. E
+                        secondo te che cosa ci ho guadagnato?
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non lo so. Che cosa ci hai guadagnato?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>La morte in vita. Ecco cosa ci ho guadagnato.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>La morte in vita.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Esatto. Ero un cadavere ambulante. Così morto che non sapevo manco
+                        stendermi nella tomba.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Capisco.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Non credo proprio. Ma ti voglio fare una domanda.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>D’accordo.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Tu hai mai letto questo libro?</td>
+                  </tr>
+               </table>
+            </div>
+            <div class="slide">13
+               <hr>
+               <table>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Ho letto delle parti. L’ho letto qua e là.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>L’hai mai letto?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Ho letto il libro di Giobbe.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>L’hai. Mai. Letto.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>No.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Però di libri ne hai letti un sacco.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Sì.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Quanti ne avrai letti, all’incirca?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non ne ho idea.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Grossomodo.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non lo so. Due a settimana, forse. Cento all’anno. Per qualcosa
+                        come quarant’anni.
+                     </td>
+                  </tr>
+               </table>
+               <div class="stage"><small><i>Il nero prende la matita, la lecca e si mette a scrivere sul taccuino,
+                        strizzando gli occhi, facendo somme con grande impegno, la lingua
+                        all’angolo della bocca e una mano sulla testa.</i></small></div>
+               <table>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Quaranta per cento fa quattromila.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i>(quasi ridendo)</i></td>
+                     <td>Ti prendo solo un po’ per i fondelli, professore. Dammi un numero.
+                        Quello che ti pare. E io te lo moltiplico per quaranta al volo.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Ventisei</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Mille e quaranta</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Centodiciotto</td>
+                  </tr>
+               </table>
+            </div>
+            <div class="slide">14
+               <hr>
+               <table>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Quattromila settecentoventi.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Quattromila settecentoventi.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Sì.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>La risposta è la domanda.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Cioè?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Le sto dando quello come nuovo numero.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Quattromila settecentoventi?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Sì.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>È un numero grosso, professore.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Sì, infatti.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Tu la sai la risposta?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>No, non la so.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Fa centottantottomila e ottocento.</td>
+                  </tr>
+               </table>
+               <div class="stage"><small><i>Restano seduti. </i></small></div>
+               <table>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Me lo dia un attimo.</td>
+                  </tr>
+               </table>
+               <div class="stage"><small><i>Il nero gli passa il taccuino e la matita, facendoli scivolare sul tavolo. Il
+                        professore fa il conto, guarda il totale e poi guarda il nero. Gli ripassa la
+                        matita e il foglio di carta e si appoggia con la schiena all’indietro
+                        sulla sedia. </i></small></div>
+            </div>
+            <div class="slide">15
+               <hr>
+               <table>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Come fa?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Per un nero, i numeri sono amici. Sono il pane quotidiano. Prendi una
+                        partita a dadi. Sei veloce con i numeri? Allora riesci a stracciare gli
+                        altri fratelli. A confiscargli il contenuto del portafoglio. In galera
+                        una ha un sacco di tempo per fa pratica con certa roba.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Capisco.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Ma torniamo ai libri che hai letto. Tu pensi di aver letto quattromila
+                        libri, o giù di lì.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Probabilmente. Magari anche di più.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Però questo qui non l’hai letto.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>No. Non dall’inizio alla fine. No.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Come mai?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non lo so.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Per te qual è il libro migliore che hanno mai scritto?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non ne ho idea.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Spara.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Di bei libri ce ne sono tanti.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Be’, scegline uno.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Forse <i>Guerra e Pace</i></td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Ok. E chiedi che è un libro migliore di questo?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non lo so. Sono due tipi di libro diversi.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Questo <i>Guerra e Pace</i>. È un libro che
+                        qualcuno si è inventato, giusto?
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            <div class="slide">16
+               <hr>
+               <table>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Be’, Sì.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Quindi è per quello che è diverso dal mio libro.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Veramente no. Per come la vedo io, sono inventati tutti e due.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Mm. Nessuno dei due è vero.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>No, in senso storico, no.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>E allora quale sarebbe un libro vero?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Magari un libro di storia. <i>Decadenza e caduta
+                           dell’impero romano</i> di Gibbon, per dire. Se non altro i fatti raccontati sarebbero
+                        fatti reali. Sarebbero cose veramente accadute.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Mh hm. E secondo te quel libro lì è migliore di questo?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Della Bibbia.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Della Bibbia.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non lo so. Gibbon è una pietra miliare.
+                        Un libro fondante.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>E un libro vero. Non ce lo scordiamo.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>E un libro vero. Appunto.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Ma è migliore di questo?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non lo so. Non so se si può fare un paragone. È come
+                        confrontare le mele con le pere.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>No, non stiamo parlando di mele e pere, professore. Stiamo parlando di
+                        due libri. Questo <i>Decadenza e caduta</i> è
+                        migliore di questo libro qui? Rispondi alla domanda.
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            <div class="slide">17
+               <hr>
+               <table>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Temo di dover dire di no.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>È più vero ma non è migliore.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Se vogliamo.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Non è quello che vogliamo. È quello che hai detto.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>D’accordo.</td>
+                  </tr>
+               </table>
+               <div class="stage"><small><i>Il nero riappoggia la bibbia sul tavolo. </i></small></div>
+               <table>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Qui sulla copertina c’era la scritta che poi si è
+                        cancellata, diceva: Il più grande libro mai
+                        scritto. Secondo te è vero?
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Può darsi.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Tu leggi tanti bei libri.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Ci provo, Sì.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Ma non hai letto il migliore di tutti. Come mai?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Devo andare.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>No, non devi andare, professore. Resta qui a farmi compagnia.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Lei ha paura che io torni alla stazione.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Potresti. Resta qui con me, invece.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>E se le promettessi di non tornarci?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Potresti tornarci lo stesso.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Ma lei non deve andare a lavorare?</td>
+                  </tr>
+               </table>
+            </div>
+            <div class="slide">18
+               <hr>
+               <table>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Stavo andando a lavorare, infatti.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Strana cosa le è successa mentre andava a lavorare.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Già.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>E se la licenziano?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Macché. Non mi licenziano.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Dovrebbe fargli una telefonata.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Non ce l’ho, il telefono. E comunque, lo sanno che se non sono
+                        già lì è perché non ci vado proprio. Non sono uno che
+                        fa tardi.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Come mai non ha un telefono?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Non mi serve. E poi i tossici me lo ruberebbero subito.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Se ne potrebbe comprare uno da quattro soldi.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Ai tossici va bene pure quello. Ma torniamo a te.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>No, continuiamo a parlare di lei per un attimo.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>D’accordo</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Le posso chiedere una cosa?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Certo.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Dove stava, esattamente? Io non l’ho proprio vista.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Vuol dire quando hai fatto quel bel tuffo?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Sì.</td>
+                  </tr>
+               </table>
+            </div>
+            <div class="slide">19
+               <hr>
+               <table>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Ero lì al binario.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Al binario.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Sì.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Be’, io non l’ho vista.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Ero lì fermo al binario. Pensavo ai fatti miei. Ed ecco che arrivi
+                        tu. A tutta birra.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Mi ero guardato intorno per essere sicuro che non ci fosse nessuno.
+                        Soprattutto bambini. E non c’era anima viva in giro.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>No. Soltanto io.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Be’, non so davvero dove potesse essere.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Mm. Hai proprio deciso di darmi il tormento con questa storia, eh,
+                        professore? Magari ero dietro a un palo o che ne so.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non c’era nessun palo.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Allora che mi vuoi dire? Pensi che un angelo nero grande e grosso sia
+                        stato mandato giù dal cielo per acchiappare quel tuo bel culetto
+                        bianco all’ultimo secondo e salvarti da una brutta fine?
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>No. Non penso questo.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Una cosa del genere non è possibile.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>No. Infatti.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Be’, sei tu che l’hai insinuato.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Io non ho insinuato niente del genere. È stato lei a tirare in
+                        ballo gli angeli. Io non ho mai parlato di angeli. Negli angeli non ci
+                        credo neanche.
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            <div class="slide">20
+               <hr>
+               <table>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>E in cosa credi?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>In un sacco di cose.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Va bene.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>In che senso, va bene?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Va bene, quali cose?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Credo in certe cose.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Questo l’hai già detto.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Probabilmente non credo più in una serie di cose in cui credevo una volta, ma questo non
+                        significa che non creda più in niente.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Be’, fammi un esempio.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Più che altro, credo nel valore delle cose.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Nel valore delle cose.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Sì.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Ok. Di quali cose?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Di un sacco di cose. Le cose culturali, per esempio. I libri, la musica,
+                        l’arte. Cose di questo genere.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Va bene.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Queste sono le cose che per me hanno valore. Sono alla base della
+                        civiltà. O quantomeno, un tempo avevano valore. Probabilmente
+                        oggi non ne hanno piùcosì tanto.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>E cosa gli è successo, a quelle cose?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>La gente ha smesso di dar loro valore. Io ho smesso di dar loro valore.
+                        Entro un certo li-
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            <div class="slide">21
+               <hr>
+               <table>
+                  <tr>
+                     <td class="speaker"></td>
+                     <td>-mite. Non saprei neanche spiegarle bene perché. quel mondo
+                        è in gran parte scomparso. E fra poco lo sarà del
+                        tutto.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Non riesco a seguirti, professore.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non c’è niente da seguire. Va bene così. Le cose che amavo un tempo erano molto fragili. Molto
+                        delicate. Ma io non lo sapevo. Pensavo che fossero indistruttibili. E mi
+                        sbagliavo.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Ed è questo che ti ha spinto a buttarti giù dal binario. Non una questione personale.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Ma <i>è</i> una questione personale. È proprio questo
+                        l’effetto dell’istruzione. Rende il mondo intero qualcosa
+                        di personale.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Hm.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Cosa, hm?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Niente, stavo solo pensando che sono parole belle forti. Non mi viene in
+                        mente nessuna risposta, e magari la risposta non c’è per
+                        niente. Ma comunque devo proprio chiedertelo: a che servono idee del
+                        genere se poi non riescono a farti tenere i piedi incollati per terra
+                        quando arriva il Sunset Limited a centotrenta
+                        all’ora?
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Bella domanda.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Piace pure a me.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Neanche io ho una risposta. Forse non c’è una logica. Non
+                        lo so. Non me ne importa. Mi è stato chiesto se mi sembrava
+                        strano il fatto di dover assistere alla morte di ogni cosa, e in effetti
+                        penso che sia strano eccome, ma que-
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            <div class="slide">22
+               <hr>
+               <table>
+                  <tr>
+                     <td class="speaker"></td>
+                     <td>-sto non vuol dire che non stia succedendo. Qualcuno deve pur essere
+                        presente.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Ma tu non hai voglia di restare a guardare fino alla fine.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>No, infatti.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Allora, vediamo se ho capito bene. Mi stai dicendo che fra te e il
+                        Sunset Limited non c’è mai stato altro
+                        che questa roba culturale.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non è poco.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Solo che a un certo punto ti è scoppiata nelle mani.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Sì.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Cioè la cultura è la tua roba.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Se vogliamo. O quantomeno lo era. Forse ha ragione lei. Forse non credo
+                        in niente. Credo nel Sunset Limited.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Cazzo, professore.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Eh sì, cazzo.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Non credi in niente.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Le cose in cui credevo non esistono più. Sarebbe stupido far finta del contrario. La civiltà
+                        occidentale è andata definitivamente in fumo nelle ciminiere di
+                        Dachau, ma io ero troppo infatuato per
+                        accorgermene. Me ne accorgo adesso.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Sei un caso difficile, professore. Lo sapevi?</td>
+                  </tr>
+               </table>
+            </div>
+            <div class="slide">23
+               <hr>
+               <table>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Be’, non c’è motivo per cui lei debba restare
+                        coinvolto nei miei problemi. È meglio che me ne vada.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Ce li hai degli amici?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>No.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Non ne hai manco uno?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>No.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Tu mi prendi per il culo, professore. Manco uno?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>No, di amici veri no.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Be’, parlami di quello lì.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Quello lì quale?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Quello che non è un amico vero.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Ho un amico all’università. Non un amico intimo. Pranziamo
+                        insieme di tanto in tanto.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Ma questo è il massimo.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>In che senso?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Quanto ad amicizia, questo è praticamente il massimo che hai.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Sì.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Mm. Be’, se questo è il migliore amico che hai, direi che
+                        lo possiamo considerare il tuo migliore amico. No?
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non lo so.</td>
+                  </tr>
+               </table>
+            </div>
+            <div class="slide">24
+               <hr>
+               <table>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Che cosa gli hai fatto?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Che cosa gli ho fatto?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Eh.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non gli ho fatto niente.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Mm hm.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non gli ho fatto niente. Cosa le fa pensare che gli abbia fatto
+                        qualcosa?
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Non lo so. Gli hai fatto qualcosa?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>No. Secondo lei cosa dovrei avergli fatto?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Non lo so. Aspetto che me lo dici tu.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Be’, non c’è niente da dire.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Però non gli hai lasciato un biglietto né niente. Quando
+                        hai deciso di prendere il treno.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>No.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Al tuo migliore amico?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non è il mio migliore amico.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Mi pareva che avevamo appena deciso che lo era.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>È <i>lei</i> che l’aveva appena deciso.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Gli hai mai detto che ci stavi pensando?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>No.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Cazzo, professore.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Perché avrei dovuto?</td>
+                  </tr>
+               </table>
+            </div>
+            <div class="slide">25
+               <hr>
+               <table>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Non lo so. Magari perché è il tuo migliore amico?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Gliel’ho detto. Non siamo tanto intimi.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Non siete tanto intimi.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>No.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>È il tuo migliore amico solo che non siete tanto intimi.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Se così vogliamo dire.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Non al punto di starlo ad annoiare parlandogli di una fesseria come la
+                        morte.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i>(girando lo sguardo per la stanza)</i></td>
+                     <td>Senta. Diciamo che le do la mia parola che me ne vado a casa senza
+                        cercare di ammazzarmi durante il tragitto.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Diciamo che ti do la mia parola che queste stronzate non le sto manco a
+                        sentire.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>E allora cosa sono, suo prigioniero?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Ma figurati. E comunque, tu eri prigioniero da prima di venire qui. Anzi,
+                        eri un condannato a morte. Che faceva tuo padre?
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Cosa?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Ti ho chiesto che faceva tuo padre. Di mestiere.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Era avvocato.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Avvocato.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Sì.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>E che tipo di cause trattava?</td>
+                  </tr>
+               </table>
+            </div>
+            <div class="slide">26
+               <hr>
+               <table>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Lavorava per il governo. Non si occupava di diritto penale e cose
+                        simili.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Mm hm. E quale sarebbe una cosa <i>simile</i> al diritto
+                        penale?
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non lo so. Le cause del divorzio, forse.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Giusto. Mi sa che hai ragione. E di cosa è morto?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Che ne sa, lei, che è morto?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>È morto?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Sì.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>E di cosa?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Di cancro.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Di cancro. Quindi è stato male per un bel pezzo.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Sì, infatti.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>E tu lo andavi a trovare?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>No.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Come mai?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non volevo.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Be’, e come mai non volevi?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non lo so. Non mi andava, punto e basta. Forse non volevo ricordarmelo in
+                        quello stato.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Cazzate. Lui te lo chiedeva di andarci?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>No.</td>
+                  </tr>
+               </table>
+            </div>
+            <div class="slide">27
+               <hr>
+               <table>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Ma tua madre Sì.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Forse Sì. Non me lo ricordo.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Su, professore. Tua madre te lo chiedeva.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Ok. È vero.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>E tu cosa le rispondevi?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Le dicevo che ci sarei andato.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Ma non ci sei andato mai.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>No.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Perché?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>È morto.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Sì, ma non è per questo. Il tempo per andarlo a trovare
+                        l’hai avuto, però non l’hai mai fatto.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Diciamo così.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Hai aspettato finché non è morto.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>E va bene. Non sono andato a trovare mio padre.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Tuo padre se ne sta steso sul letto a morire di cancro. Tua madre
+                        è seduta lì con lui. Gli tiene la mano. Lui sente male da tutte le parti.
+                        E ti chiedono di andarlo a trovare un’ultima volta prima che
+                        muore e tu gli dici no.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Se la vuole mettere così.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Be’, tu come la metteresti?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non lo so.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>È così che <i>è andata</i>. O no?
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            <div class="slide">28
+               <hr>
+               <table>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Immagino di Sì.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>No, non immaginare. È andata così o no?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Sì.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Bene. Aspetta che vedo se trovo l’orario della metropolitana.</td>
+                  </tr>
+               </table>
+               <div class="stage"><small><i>Apre il cassetto del tavolo e ci fruga dentro. </i></small></div>
+               <table>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Vediamo quando passa il prossimo treno.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non ci trovo niente da ridere.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Menomale che dici così, professore. Perché non ci trovo niente da ridere manco
+                        io. È solo che ogni minuto che passa mi meraviglio di più. Ma possibile che non ti <i>vedi</i>, zuccherino? Sei
+                        trasparente come il vetro. Vedo le rotelline che ti girano dentro la
+                        testa. Gli ingranaggi. E vedo anche la luce. Una luce buona. Una luce
+                        vera. Tu non la vedi?
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>No, non la vedo.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Be’, che Dio ti benedica, fratello. Che Dio ti benedica e
+                        t’assista. Perché la luce c’è.
+                     </td>
+                  </tr>
+               </table>
+               <div class="stage"><small><i>Restano seduti. </i></small></div>
+               <table>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Quando è stato in prigione?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Tanto tempo fa.</td>
+                  </tr>
+               </table>
+            </div>
+            <div class="slide">29
+               <hr>
+               <table>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Per che cosa?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Omicidio.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Davvero?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>E chi direbbe di essere stato dentro per omicidio se non fosse vero?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Prima l’ha chiamata galera.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Ah Sì?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Di solito i neri il carcere lo chiamano galera?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>No. Solo noi vecchi negri di campagna. Abbiamo un po’ il chiodo
+                        fisso di chiamare le cose per quello che sono. Non ci voglio neanche
+                        pensare a quanti nomi esistono per la galera. Figuriamoci starli a
+                        contare.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>E ha tante storie di galera?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Storia di galera.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Sì.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Non lo so. Una volta qualche storia di galera la raccontavo, ma adesso
+                        hanno perso parecchio fascino. Magari dovremmo parlare di qualcosa di più allegro.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>È mai stato sposato?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Sposato.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Sì.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i>(sottovoce)</i></td>
+                     <td>Oddio.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Che c’è?</td>
+                  </tr>
+               </table>
+            </div>
+            <div class="slide">30
+               <hr>
+               <table>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Tutto sommato, forse ci conviene tornare alle storie di galera. <i>(Scuote la testa e ride in silenzio. Si stringe il
+                           naso fra le dita, tenendo gli occhi chiusi).</i> Oh, santo
+                        cielo.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Ha figli?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>No, professore. Non ho nessuno. Nella mia famiglia sono morti tutti.
+                        Avevo due ragazzi. Sono morti da anni. Ormai quasi tutti quelli che ho
+                        conosciuto sono morti, se è per questo. E la voca dovrebbe darsi
+                        da pensare. Potrei essere dannoso per la tua salute.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>È sempre stato in mezzo ai guai?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Proprio così. Mi piaceva. Forse mi piace ancora. Mi sono fatto sette anni
+                        di carcere duro e fortuna che non me ne sono beccati molti di più. Ho fatto male a un sacco di gente. Li strapazzavo e un
+                        po’ e quelli non si rialzavano più.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Però adesso non si mette più nei guai.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>No.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Ma le piace comunque?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Be’, forse per me è una specie di condanna. Il mio stesso
+                        karma mi prende a calci in culo. Ma ora sono passato dall’altra
+                        parte. Se vuoi aiutare chi è nei guai, devi andare dove stanno i
+                        guai. C’è poco da scegliere.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>E lei vuole aiutare chi è nei guai.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Sì.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>E perché?</td>
+                  </tr>
+               </table>
+            </div>
+            <div class="slide">31
+               <hr>
+               <div class="stage"><small><i>Il nero piega la testa da un lato e lo osserva. </i></small></div>
+               <table>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Non sei ancora pronto.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Allora mi dia solo la risposta più breve.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>È questa la risposta più breve.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Da quanto tempo sta qui?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Vuoi dire in questo palazzo?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Sì.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Sei anni. Quasi sette.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non capisco come mai abita qui.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Qui invece che dove?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>In qualunque posto.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Be’, di fatto direi che questo è un qualunque posto. Potrei
+                        anche abitare in un altro palazzo, d’accordo. Ma questo qui mi va
+                        bene. Ho una camera da letto per starmene un po’ in pace. E lì c’è un divano dove la gente può buttarsi
+                        a dormire. Tossici e crackomani, perlopiù. Che mango a dirlo ti soffiamo tutto quello che possono
+                        portarsi appresso, perciò non possiedo un bel niente. E va bene così. Basta che frequenti la gente giusta e vedi che alla fine le
+                        voglie ti passano tutte. Una volta si sono rubati perfino il frigo, ma
+                        qualcuno li ha beccati sulle scale e gliel’ha fatto riportare su.
+                        Adesso ho quel bestione enorme che vedi laggiù. Al posto di quell’altro. L’unica cosa che mi
+                        manca è la musica. Mi voglio comprare una blindata per-
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            <div class="slide">32
+               <hr>
+               <table>
+                  <tr>
+                     <td class="speaker"></td>
+                     <td>-la camera da letto. A quel punto posso ricominciare a sentirmi un
+                        po’ di musica. Però bisogna cambiare la porta e pure il
+                        telaio. Ci sto lavorando. Della televisione non me ne frega niente, ma
+                        la musica mi manca.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Non le sembra un posto orrendo, questo?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Orrendo?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Sì.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Cos’ha di orrendo?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>È orrendo. Ci si vive una vita orrenda.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Una vita orrenda?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Sì.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Che cazzo, professore. Questa non è una vita orrenda. Ma che
+                        dici?
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Questo posto. È un posto orrendo. Pieno di gente orrenda.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Oh santo cielo.</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Lo capirà anche lei che questo non è gente che vale la pena
+                        salvare. Anche se uno la potesse salvare. E non la si può
+                        salvare. Questo lo capirà anche lei.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Be’, non ho mai detto di no alle sfide. In carcere, prima di
+                        uscire, ho cominciato a organizzare delle funzioni religiose. Quella
+                        Sì che era una sfida. A un sacco di quelli che venivano in
+                        realtà non gliene fregava niente. Non gliene poteva sbattere di
+                        meno della parola di Dio. Volevano solo che gli facesse curriculum.
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            <div class="slide">33
+               <hr>
+               <table>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Curriculum?</td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">NERO<i></i></td>
+                     <td>Curriculum. Là dentro c’erano fratelli
+                        che ne avevano combinate di tutti i colori, e non gli dispiaceva di un
+                        cazzo a parte che si erano fatti beccare. Ovviamente la cosa assurda era
+                        che tanti credevano veramente in Dio. Forse pure di più di quelli che stanno fuori. Per me era così, almeno. Ti consiglio di rifletterci su, professore.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="speaker">BIANCO<i></i></td>
+                     <td>Penso che sia meglio che vada.</td>
+                  </tr>
+               </table>[...]
+            </div>
+         </div>
+      </div><script type="text/javascript" src="node_modules/alertifyjs/build/alertify.min.js"></script><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script><script type="text/javascript" src="node_modules/fullpage.js/vendors/scrolloverflow.min.js"></script><script type="text/javascript" src="node_modules/fullpage.js/dist/jquery.fullpage.min.mod.js"></script><script type="text/javascript" src="script.js"></script></body>
+</html>

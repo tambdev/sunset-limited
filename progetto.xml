@@ -1,0 +1,2415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="progetto.xsl"?>
+<!DOCTYPE doc [
+    <!ENTITY % TEI SYSTEM "tei_drama.dtd">
+    %TEI;
+    <!ENTITY % caratteriSpeciali SYSTEM "caratteriSpeciali.dtd">
+    %caratteriSpeciali;
+]>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Sunset Limited</title>
+                <author>Cormac McCarty</author>
+                <respStmt>
+                    <resp>Conversione in XHTML/TEI</resp>
+                    <name>Stefano Tambellini</name>
+                </respStmt>
+            </titleStmt>
+            <editionStmt>
+                <edition n="1">L&apostr;Arcipelago</edition>
+                <respStmt>
+                    <resp>Traduzione</resp>
+                    <name>Martina Testa</name>
+                </respStmt>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Einaudi</publisher>
+                <pubPlace>Torino</pubPlace>
+                <date when="2008">2008</date>
+                <idno type="ISBN">978-88-06-20159-3</idno>
+                <availability status="restricted">
+                    <p>Disponibile sotto licenza commerciale del distributore</p>
+                    <licence>© 2008 e 2010 Giulio Einaudi Editore s.p.a., Torino</licence>
+                </availability>
+                <distributor>Einaudi</distributor>
+            </publicationStmt>
+            <seriesStmt>
+                <title>ET einaudi tascabili scrittori</title>
+                <biblScope unit="volume">1598</biblScope>
+            </seriesStmt>
+            <sourceDesc>
+                <listBibl>
+                    <bibl>
+                        <title>The Sunset Limited</title>
+                        <author>McCarty, Cormac</author>
+                        <publisher>Vintage Books</publisher>
+                        <pubPlace>New York</pubPlace>
+                        <date when="2006">2006</date>
+                    </bibl>
+                    <bibl>
+                        <title>The Sunset Limited</title>
+                        <author>McCarty, Cormac</author>
+                        <publisher>Random House</publisher>
+                        <pubPlace>Toronto</pubPlace>
+                        <date when="2006">2006</date>
+                    </bibl>
+                </listBibl>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>Progetto del corso di Codifica di Testi tenuto all&apostr;Universit&agrave; di
+                    Pisa.</p>
+                <p>Edizione di lettura con impaginazione grafica.</p>
+                <p>Codifica accurata basilare con accorgimenti sull'XML nei riguardi di caratteri
+                    speciali, correzioni nell'edizione fisica e semantiche (oltre che ovviamente
+                    strutturali).</p>
+            </projectDesc>
+        </encodingDesc>
+        <revisionDesc>
+            <list>
+                <item>
+                    <date when="2017-01-02">2 gennaio 2017</date>
+                    <p>Codifica XML del documento e impostazione cartella del progetto.</p>
+                </item>
+                <item>
+                    <date when="2017-01-03">3 gennaio 2017</date>
+                    <p>Stilizzazione XSLT e CSS del documento HTML risultante.</p>
+                </item>
+                <item>
+                    <date when="2017-01-04">4 gennaio 2017</date>
+                    <p>Correzione generale sito risultante e codifica.</p>
+                </item>
+                <item>
+                    <date when="2017-01-05">5 gennaio 2017</date>
+                    <p>Aggiunta di librerie grafiche tramite npm e font più leggibile.</p>
+                </item>
+                <item>
+                    <date when="2017-01-06">6 gennaio 2017</date>
+                    <p>Sostituzione dei xsl:for-each con xsl:template e correzione errori vari.</p>
+                </item>
+                <item>
+                    <date when="2017-01-07">7 gennaio 2017</date>
+                    <p>Completamento della codifica e miglioramento navigazione e
+                        responsività/usabilità.</p>
+                </item>
+                <item>
+                    <date when="2017-01-08">8 gennaio 2017</date>
+                    <p>Ultimi accorgimenti e correzioni.</p>
+                </item>
+                <item>
+                    <date when="2017-01-15">15 gennaio 2017</date>
+                    <p>Rimozione dei pb e suddivisione del testo in maniera appropriata tra una
+                        pagina e l'altra. Aggiunta funzione di evidenziazione del testo.</p>
+                </item>
+            </list>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="page" n="3">
+                <stage type="setting"> La scena si svolge in una stanza di un caseggiato popolare in
+                    un quartiere nero di New York. C&apostr;&egrave; una cucina con dei fornelli e
+                    un grosso frigorifero. Una porta che d&agrave; sul pianerottolo e
+                    un&apostr;altra presumibilmente d&agrave; sulla camera da letto. La prima
+                    &egrave; dotata di una bizzarra serie di spranghe e chiavistelli. Nella stanza
+                    c&apostr;&egrave; un tavolo di formica da quattro soldi con due sedie di metallo
+                    e plastica. Il tavolo ha un cassetto. Sul tavolo ci sono una Bibbia e un
+                    giornale. Un paio di occhiali. Un taccuino e una matita. Su una delle due sedie
+                    (quella di destra) &egrave; seduto un nero corpulento, sull&apostr;altra un
+                    bianco di mezza et&agrave; con un paio di pantaloni della tuta e scarpe da
+                    ginnastica. Ha indosso una T-shirt, mentre la giacca &emdash; che fa un paio con
+                    i pantaloni &emdash; &egrave; appesa dietro di lui allo schienale della sedia. </stage>
+                <spGrp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Allora, professore, che devo fare con te?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p><choice>
+                                <sic>Perch&egrave;</sic>
+                                <corr>Perch&eacuta;</corr>
+                            </choice> dovrebbe fare qualcosa?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Te l&apostr;ho detto. Io non c&apostr;entro niente. Quando stamattina
+                            sono uscito di casa per andare a lavoro tu mica c&apostr;eri nei miei
+                            programmi. E invece eccoti qua.</p>
+                    </sp>
+                </spGrp>
+            </div>
+            <div type="page" n="4">
+                <spGrp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non significa nulla. Niente di quello che succede significa
+                            qualcos&apostr;altro.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Mm hm. No eh?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>No, infatti.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>E allora che significa?</p>
+
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non significa nulla. Capita di incontrare delle persone e capita che
+                            qualcuna di queste sia nei guai per un motivo o per l&apostr;altro, ma
+                            non significa che dobbiamo assumercene la responsabilit&agrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Mm hm.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>E comunque, chi &egrave; sempre pronto a occuparsi dei perfetti
+                            sconosciuti molto spesso non si occupa delle persone di cui dovrebbe
+                            occuparsi. Per come la vedo io. Se uno si lita a fare ci&ograve; che
+                            dovrebbe, non diventa un eroe</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>E io sarei un tipo cos&igrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non lo so. &Egrave; un tipo cos&igrave;?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Be&apostr;, ci pu&ograve; anche essere un fondo di verit&agrave; in
+                            quello che dici, non dico di no. Ma in questo caso specifico,
+                            sta&apostr; sicuro che io non sapevo proprio di che tipo di persona mi
+                            dovevo occupare, o cosa fare quando a trovavo. In questo caso specifico,
+                            mi sono basato su una cosa sola</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>E cio&egrave;?</p>
+                    </sp>
+                    <sp n="1">
+                        <speaker>NERO</speaker>
+                        <p>Cio&egrave; sul fatto che vedo un tizio lass&ugrave; in piedi. Lo guardo
+                            e posso pure dire: Mah, a prima vista non</p>
+                    </sp>
+                </spGrp>
+            </div>
+            <div type="page" n="5">
+                <spGrp>
+                    <sp n="2">
+                        <speaker>NERO</speaker>
+                        <p>sembra mio fratello. Per&ograve; sta <choice>
+                                <sic>l&iacuta;</sic>
+                                <corr>l&igrave;</corr>
+                            </choice>. Forse &egrave; il caso che lo guardo meglio.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>E <choice>
+                                <sic>cos&iacuta;</sic>
+                                <corr>cos&igrave;</corr>
+                            </choice> ha fatto.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Be&apostr;, era un po&apostr; difficile far finta di niente. Fammi dire
+                            che il tuo approccio &egrave; stato un bel po&apostr; diretto.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non &egrave; stato un approccio. Non l&apostr;avevo neanche vista.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Mh hm.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Adesso &egrave; meglio che me ne vada. Sto cominciando a darle sui
+                            nervi.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>No, non &egrave; vero. Non farci caso a me. Sembri uno a posto,
+                            professore. In realt&agrave; quello che non capisco &egrave; come hai
+                            fatto a metterti in un casino del genere.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Eh gi&agrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Ti senti bene? Hai dormito, stanotte?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>No.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Quando hai deciso che oggi era il gran giorno? Cos&apostr;&egrave;, ha
+                            qualcosa di speciale?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>No. Be&apostr;, guardi. Oggi &egrave; il mio compleanno. Ma che reputi la
+                            cosa speciale, proprio no.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Allora buon compleanno, professore.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Grazie.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Insomma, hai visto che stava arrivando il tuo compleanno e hai pensato
+                            che era il giorno pi&ugrave; adatto.</p>
+                    </sp>
+                </spGrp>
+            </div>
+            <div type="page" n="6">
+                <spGrp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Chi lo sa. Magari i compleanni sono pericolosi. Come il Natale.
+                            Decorazioni sugli alberi, ghirlande sulle porte, e cadaveri che
+                            penzolano dai soffitti di tutta l&apostr;America.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Mm. Il che non depone molto a favore del Natale, giusto?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Il Natale non &egrave; pi&ugrave; quello di una volta.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Su questo ti do senz&apostr;altro ragione. Al cento per cento.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Adesso devo andare.</p>
+                    </sp>
+                </spGrp>
+                <stage>Si alza e prende la giacca dallo schienale della sedia, se la mette sopra le
+                    spalle e poi ficca tutte e due le braccia nelle maniche, invece di infilarsela
+                    una manica per volta. </stage>
+                <spGrp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>T&apostr;infili sempre le giacche in quel modo?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Cos&apostr;ha che non va il modo in cui mi infilo una giacca?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Non ho detto che ha qualcosa che non va. Volevo solo sapere se &egrave;
+                            il metodo che usi sempre.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non &egrave; che abbia un metodo, me la infilo e basta.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Mm hm.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Che c&apostr;&egrave;, &egrave; da effeminati?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Mm.</p>
+                    </sp>
+                </spGrp>
+            </div>
+            <div type="page" n="7">
+                <spGrp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Che?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Niente. Me ne sto solo qua seduto a studiare il comportamento dei
+                            professori.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>S&igrave;. Be&apostr;, adesso me ne devo andare.</p>
+                    </sp>
+                </spGrp>
+                <stage> Il nero si alza. </stage>
+                <spGrp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Ok. Aspetta che prendo la giacca.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>La giacca?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>S&igrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Dove va?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Vengo con te.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>In che senso? Viene con me dove?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Vengo con te nel posto dove stai andando.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>No che non viene.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>S&igrave; invece.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Ma io sto tornando a casa.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Benissimo.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Benissimo? Guardi che lei non ci viene a casa mia.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Eccome se ci vengo. Aspetta che prendo la giacca.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Ma non pu&ograve; venire a casa mia.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Perch&eacuta; no?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p><choice>
+                                <sic>Perch&egrave;</sic>
+                                <corr>Perch&eacuta;</corr>
+                            </choice> no.</p>
+                    </sp>
+                </spGrp>
+            </div>
+            <div type="page" n="8">
+                <spGrp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Come sarebbe? Tu puoi venire a casa mia e io non posso venire a casa
+                            tua?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>No. Cio&egrave;, no, non &egrave; questo. &Egrave; solo che voglio
+                            tornarmene a casa.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Abiti in un palazzo col portiere?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>S&igrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>E allora? I neri non possono entrare?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>No. Cio&egrave;, certo che possono entrare. Senta. Basta con questi
+                            giochetti. Devo andare. Sono molto stanco.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Be&apostr;, spero che non ci piantano grande quando vedono che salgo con
+                            te.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Dice sul serio?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Eddai che l&apostr;hai capito. S&igrave; che dico sul serio.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non pu&ograve; dire sul serio.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Serio come un attacco al cuore</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p><choice>
+                                <sic>Perch&egrave;</sic>
+                                <corr>Perch&eacuta;</corr>
+                            </choice> sta facendo tutto questo?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Io? Io non ho nessuna scelta.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Certo che ce l&apostr;ha.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>No invece.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Chi l&apostr;ha nominata mio angelo custode?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Aspetta che prendo la giacca.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Risponda alla domanda.</p>
+                    </sp>
+                    <sp n="1">
+                        <speaker>NERO</speaker>
+                        <p>Tu <emph>lo sai</emph> chi &egrave; stato. Non te lo mica chie</p>
+                    </sp>
+                </spGrp>
+            </div>
+            <div type="page" n="9">
+                <spGrp>
+                    <sp n="2">
+                        <speaker>NERO</speaker>
+                        <p>sto io di saltarmi in braccio stamattina mentre aspettavo la metro.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non le sono saltato in braccio.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Ah no?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>No.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>E allora come hai fatto ad arrivarci?</p>
+                    </sp>
+                </spGrp>
+                <stage>Il professore resta in piedi a testa china. Guarda la sedia e poi si volta e
+                    ci si va a sedere di nuovo. </stage>
+                <spGrp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Be&apostr;? Non usciamo pi&ugrave;?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Lei pensa davvero che in questa stanza ci sia <name type="person"
+                                >Ges&ugrave;</name>?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>No. Non lo penso.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Ah no?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p><emph>Lo so</emph> che c&apostr;&egrave; <name type="person"
+                                >Ges&ugrave;</name> in questa stanza</p>
+                    </sp>
+                </spGrp>
+                <stage>Il professore congiunge le mani sul tavolo e china la testa. Il nero prende
+                    l&apostr;altra sedia e si risiede. </stage>
+                <spGrp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Tutto sta in come uno lo dice, professore. &Egrave; come se ti chiedo se
+                                <emph>pensi</emph> di avere addosso quella giacca. Capisci cosa
+                            intendo?</p>
+                    </sp>
+                    <sp n="1">
+                        <speaker>BIANCO</speaker>
+                        <p>Non &egrave; la stessa cosa. &Egrave; una questione di consenso generale.
+                            Se io e lei diciamo che ho addosso una giacca e <name type="person"
+                                >Cecil</name> dice che sono nudo e</p>
+                    </sp>
+                </spGrp>
+            </div>
+            <div type="page" n="10">
+                <spGrp>
+                    <sp n="2">
+                        <speaker>BIANCO</speaker>
+                        <p>ho la pelle verde e la coda, allora ci conviene pensare a un posto dove
+                            ricoverare <name type="person">Cecil</name>, per il suo bene?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>E chi &egrave; <name type="person">Cecil</name>?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non &egrave; nessuno. &Egrave; solo un personaggio che ho inventato per
+                            spiegarmi meglio.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Inventato.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>S&igrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Mm.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non vorr&agrave; mica ricominciare, eh? Non &egrave; la stessa cosa. Il
+                            fatto che ho inventato <name type="person">Cecil</name>.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Per&ograve; l&apostr;ha inventato.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>S&igrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>E il suo modo di vedere le cose non conta niente.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Esatto. &Egrave; per questo che l&apostr;ho inventato. Ma avrei anche
+                            potuto metterla in un altro modo, avrei potuto dire che era lei quello
+                            convinto che non avessi la giacca.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>E che era verde, e cazzi vari.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>S&igrave;</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Per&ograve; mica hai detto <choice>
+                                <sic>cos&iacuta;</sic>
+                                <corr>cos&igrave;</corr>
+                            </choice>.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>No.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Hai scaricato tutto su <name type="person">Cecil</name>.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>S&igrave;.</p>
+                    </sp>
+                </spGrp>
+            </div>
+            <div type="page" n="11">
+                <spGrp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Ma <name type="person">Cecil</name> non si pu&ograve; difendere, <choice>
+                                <sic>perch&egrave;</sic>
+                                <corr>perch&eacuta;</corr>
+                            </choice> dato che non &egrave; d&apostr;accordo con tutti gli altri,
+                            quello che dice lui non vale niente. A parte poi il fatto che te lo sei
+                            inventato tu, che &egrave; verde e tutto il resto.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non &egrave; lui, quello verde. Sono io. Ma dove vuole andare a
+                            parare?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Sto solo cercando di capire meglio questo <name type="person"
+                                >Cecil</name>.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non mi pare proprio. Lei lo vede, <name type="person"
+                            >Ges&ugrave;</name>?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>No. Non lo vedo.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Per&ograve; ci parla.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Ogni santo giorno.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>E lui parla con lei.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Mi ha parlato. S&igrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Ma lei lo sente? Sente proprio la sua voce?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>No, non sento la sua voce. Non sento neanche la mia, se &egrave; per
+                            questo. A lui per&ograve; l&apostr;ho sentito.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Be&apostr;, allora Ges&ugrave; non potrebbe essere soltanto nella sua
+                            testa?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Infatti <emph>&egrave;</emph> nella mia testa.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Allora non capisco cos&apostr;&egrave; che sta cercando di dirmi.</p>
+                    </sp>
+                    <sp n="1">
+                        <speaker>NERO</speaker>
+                        <p>Lo so che non capisci, zuccherino. Sta&apostr; a sentire. La prima cosa
+                            che devi tenere presente</p>
+                    </sp>
+                </spGrp>
+            </div>
+            <div type="page" n="12">
+                <spGrp>
+                    <sp n="2">
+                        <speaker>NERO</speaker>
+                        <p>&egrave; che io, nella testa, non ho manco un pensiero originale. Se non
+                            ha dentro la scia del profumo della divinit&agrave;, allora non mi
+                            interessa.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>La scia del profumo della divinit&agrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Esatto. Che te ne pare?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non &egrave; male.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>L&apostr;ho sentito alla radio. Da un predicatore nero. Ma il punto
+                            &egrave; che ci ho anche provato a fare nell&apostr;altro modo. E mica a
+                            spizzichi e bocconi, eh. Dico proprio benda sugli occhi, briglia sciolta
+                            e via a correre in mezzo ai boschi. Oddio. Ci ho provato eccome. Se
+                            trovi un cristiano che ci ha provato <choice>
+                                <sic>pi&uacuta;</sic>
+                                <corr>pi&ugrave;</corr>
+                            </choice> di me, mi piacerebbe conoscerlo. Mi piacerebbe davvero. E
+                            secondo te che cosa ci ho guadagnato?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non lo so. Che cosa ci hai guadagnato?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>La morte in vita. Ecco cosa ci ho guadagnato.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>La morte in vita.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Esatto. Ero un cadavere ambulante. Cos&igrave; morto che non sapevo manco
+                            stendermi nella tomba.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Capisco.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Non credo proprio. Ma ti voglio fare una domanda.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>D&apostr;accordo.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Tu hai mai letto questo libro?</p>
+                    </sp>
+                </spGrp>
+            </div>
+            <div type="page" n="13">
+                <spGrp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Ho letto delle parti. L&apostr;ho letto qua e l&agrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>L&apostr;hai mai letto?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Ho letto il libro di Giobbe.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>L&apostr;hai. Mai. Letto.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>No.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Per&ograve; di libri ne hai letti un sacco.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>S&igrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Quanti ne avrai letti, all&apostr;incirca?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non ne ho idea.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Grossomodo.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non lo so. Due a settimana, forse. Cento all&apostr;anno. Per qualcosa
+                            come quarant&apostr;anni.</p>
+                    </sp>
+                </spGrp>
+                <stage>Il nero prende la matita, la lecca e si mette a scrivere sul taccuino,
+                    strizzando gli occhi, facendo somme con grande impegno, la lingua
+                    all&apostr;angolo della bocca e una mano sulla testa.</stage>
+                <spGrp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Quaranta per cento fa quattromila.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <stage who="speaker">(quasi ridendo)</stage>
+                        <p>Ti prendo solo un po&apostr; per i fondelli, professore. Dammi un numero.
+                            Quello che ti pare. E io te lo moltiplico per quaranta al volo.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Ventisei</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Mille e quaranta</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Centodiciotto</p>
+                    </sp>
+                </spGrp>
+            </div>
+            <div type="page" n="14">
+                <spGrp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p><choice>
+                                <sic>Quattromilasettecentoventi</sic>
+                                <corr>Quattromila settecentoventi</corr>
+                            </choice>.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p><choice>
+                                <sic>Quattromilasettecentoventi</sic>
+                                <corr>Quattromila settecentoventi</corr>
+                            </choice>.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>S&igrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>La risposta &egrave; la domanda.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Cio&egrave;?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Le sto dando quello come nuovo numero.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p><choice>
+                                <sic>Quattromilasettecentoventi</sic>
+                                <corr>Quattromila settecentoventi</corr>
+                            </choice>?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>S&igrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>&Egrave; un numero grosso, professore.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>S&igrave;, infatti.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Tu la sai la risposta?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>No, non la so.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Fa centottantottomila e ottocento.</p>
+                    </sp>
+                </spGrp>
+                <stage>Restano seduti. </stage>
+                <spGrp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Me lo dia un attimo.</p>
+                    </sp>
+                </spGrp>
+                <stage>Il nero gli passa il taccuino e la matita, facendoli scivolare sul tavolo. Il
+                    professore fa il conto, guarda il totale e poi guarda il nero. Gli ripassa la
+                    matita e il foglio di carta e si appoggia con la schiena all&apostr;indietro
+                    sulla sedia. </stage>
+            </div>
+            <div type="page" n="15">
+                <spGrp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Come fa?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Per un nero, i numeri sono amici. Sono il pane quotidiano. Prendi una
+                            partita a dadi. Sei veloce con i numeri? Allora riesci a stracciare gli
+                            altri fratelli. A confiscargli il contenuto del portafoglio. In galera
+                            una ha un sacco di tempo per fa pratica con certa roba.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Capisco.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Ma torniamo ai libri che hai letto. Tu pensi di aver letto quattromila
+                            libri, o <choice>
+                                <sic>gi&uacuta;</sic>
+                                <corr>gi&ugrave;</corr>
+                            </choice> di <choice>
+                                <sic>l&iacuta;</sic>
+                                <corr>l&igrave;</corr>
+                            </choice>.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Probabilmente. Magari anche di <choice>
+                                <sic>pi&uacuta;</sic>
+                                <corr>pi&ugrave;</corr>
+                            </choice>.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Per&ograve; questo qui non l&apostr;hai letto.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>No. Non dall&apostr;inizio alla fine. No.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Come mai?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non lo so.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Per te qual &egrave; il libro migliore che hanno mai scritto?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non ne ho idea.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Spara.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Di bei libri ce ne sono tanti.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Be&apostr;, scegline uno.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Forse <name type="book">Guerra e Pace</name></p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Ok. E chiedi che &egrave; un libro migliore di questo?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non lo so. Sono due tipi di libro diversi.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Questo <name type="book">Guerra e Pace</name>. &Egrave; un libro che
+                            qualcuno si &egrave; inventato, giusto?</p>
+                    </sp>
+                </spGrp>
+            </div>
+            <div type="page" n="16">
+                <spGrp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Be&apostr;, S&igrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Quindi &egrave; per quello che &egrave; diverso dal mio libro.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Veramente no. Per come la vedo io, sono inventati tutti e due.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Mm. Nessuno dei due &egrave; vero.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>No, in senso storico, no.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>E allora quale sarebbe un libro vero?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Magari un libro di storia. <name type="book">Decadenza e caduta
+                                dell&apostr;impero romano</name> di <name type="person"
+                                >Gibbon</name>, per dire. Se non altro i fatti raccontati sarebbero
+                            fatti reali. Sarebbero cose veramente accadute.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Mh hm. E secondo te quel libro <choice>
+                                <sic>l&iacuta;</sic>
+                                <corr>l&igrave;</corr>
+                            </choice> &egrave; migliore di questo?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Della Bibbia.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Della Bibbia.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non lo so. <name type="person">Gibbon</name> &egrave; una pietra miliare.
+                            Un libro fondante.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>E un libro vero. Non ce lo scordiamo.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>E un libro vero. Appunto.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Ma &egrave; migliore di questo?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non lo so. Non so se si pu&ograve; fare un paragone. &Egrave; come
+                            confrontare le mele con le pere.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>No, non stiamo parlando di mele e pere, professore. Stiamo parlando di
+                            due libri. Questo <name type="book">Decadenza e caduta</name> &egrave;
+                            migliore di questo libro qui? Rispondi alla domanda.</p>
+                    </sp>
+                </spGrp>
+            </div>
+            <div type="page" n="17">
+                <spGrp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Temo di dover dire di no.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>&Egrave; pi&ugrave; vero ma non &egrave; migliore.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Se vogliamo.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Non &egrave; quello che vogliamo. &Egrave; quello che hai detto.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>D&apostr;accordo.</p>
+                    </sp>
+                </spGrp>
+                <stage>Il nero riappoggia la bibbia sul tavolo. </stage>
+                <spGrp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Qui sulla copertina c&apostr;era la scritta che poi si &egrave;
+                            cancellata, diceva: <quote>Il pi&ugrave; grande libro mai
+                                scritto</quote>. Secondo te &egrave; vero?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Pu&ograve; darsi.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Tu leggi tanti bei libri.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Ci provo, S&igrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Ma non hai letto il migliore di tutti. Come mai?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Devo andare.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>No, non devi andare, professore. Resta qui a farmi compagnia.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Lei ha paura che io torni alla stazione.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Potresti. Resta qui con me, invece.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>E se le promettessi di non tornarci?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Potresti tornarci lo stesso.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Ma lei non deve andare a lavorare?</p>
+                    </sp>
+                </spGrp>
+            </div>
+            <div type="page" n="18">
+                <spGrp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Stavo andando a lavorare, infatti.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Strana cosa le &egrave; successa mentre andava a lavorare.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Gi&agrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>E se la licenziano?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p><choice>
+                                <sic>Macch&egrave;</sic>
+                                <corr>Macch&eacuta;</corr>
+                            </choice>. Non mi licenziano.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Dovrebbe fargli una telefonata.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Non ce l&apostr;ho, il telefono. E comunque, lo sanno che se non sono
+                            gi&agrave; <choice>
+                                <sic>l&iacuta;</sic>
+                                <corr>l&igrave;</corr>
+                            </choice> &egrave; perch&eacuta; non ci vado proprio. Non sono uno che
+                            fa tardi.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Come mai non ha un telefono?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Non mi serve. E poi i tossici me lo ruberebbero subito.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Se ne potrebbe comprare uno da quattro soldi.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Ai tossici va bene pure quello. Ma torniamo a te.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>No, continuiamo a parlare di lei per un attimo.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>D&apostr;accordo</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Le posso chiedere una cosa?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Certo.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Dove stava, esattamente? Io non l&apostr;ho proprio vista.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Vuol dire quando hai fatto quel bel tuffo?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>S&igrave;.</p>
+                    </sp>
+                </spGrp>
+            </div>
+            <div type="page" n="19">
+                <spGrp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Ero <choice>
+                                <sic>l&iacuta;</sic>
+                                <corr>l&igrave;</corr>
+                            </choice> al binario.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Al binario.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>S&igrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Be&apostr;, io non l&apostr;ho vista.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Ero <choice>
+                                <sic>l&iacuta;</sic>
+                                <corr>l&igrave;</corr>
+                            </choice> fermo al binario. Pensavo ai fatti miei. Ed ecco che arrivi
+                            tu. A tutta birra.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Mi ero guardato intorno per essere sicuro che non ci fosse nessuno.
+                            Soprattutto bambini. E non c&apostr;era anima viva in giro.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>No. Soltanto io.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Be&apostr;, non so davvero dove potesse essere.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Mm. Hai proprio deciso di darmi il tormento con questa storia, eh,
+                            professore? Magari ero dietro a un palo o che ne so.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non c&apostr;era nessun palo.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Allora che mi vuoi dire? Pensi che un angelo nero grande e grosso sia
+                            stato mandato gi&ugrave; dal cielo per acchiappare quel tuo bel culetto
+                            bianco all&apostr;ultimo secondo e salvarti da una brutta fine?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>No. Non penso questo.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Una cosa del genere non &egrave; possibile.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>No. Infatti.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Be&apostr;, sei tu che l&apostr;hai insinuato.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Io non ho insinuato niente del genere. &Egrave; stato lei a tirare in
+                            ballo gli angeli. Io non ho mai parlato di angeli. Negli angeli non ci
+                            credo neanche.</p>
+                    </sp>
+                </spGrp>
+            </div>
+            <div type="page" n="20">
+                <spGrp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>E in cosa credi?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>In un sacco di cose.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Va bene.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>In che senso, va bene?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Va bene, quali cose?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Credo in certe cose.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Questo l&apostr;hai gi&agrave; detto.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Probabilmente non credo <choice>
+                                <sic>pi&uacuta;</sic>
+                                <corr>pi&ugrave;</corr>
+                            </choice> in una serie di cose in cui credevo una volta, ma questo non
+                            significa che non creda <choice>
+                                <sic>pi&uacuta;</sic>
+                                <corr>pi&ugrave;</corr>
+                            </choice> in niente.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Be&apostr;, fammi un esempio.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Pi&ugrave; che altro, credo nel valore delle cose.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Nel valore delle cose.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>S&igrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Ok. Di quali cose?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Di un sacco di cose. Le cose culturali, per esempio. I libri, la musica,
+                            l&apostr;arte. Cose di questo genere.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Va bene.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Queste sono le cose che per me hanno valore. Sono alla base della
+                            civilt&agrave;. O quantomeno, un tempo avevano valore. Probabilmente
+                            oggi non ne hanno <choice>
+                                <sic>pi&uacuta;</sic>
+                                <corr>pi&ugrave;</corr>
+                            </choice>
+                            <choice>
+                                <sic>cos&iacuta;</sic>
+                                <corr>cos&igrave;</corr>
+                            </choice> tanto.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>E cosa gli &egrave; successo, a quelle cose?</p>
+                    </sp>
+                    <sp n="1">
+                        <speaker>BIANCO</speaker>
+                        <p>La gente ha smesso di dar loro valore. Io ho smesso di dar loro valore.
+                            Entro un certo li</p>
+                    </sp>
+                </spGrp>
+            </div>
+            <div type="page" n="21">
+                <spGrp>
+                    <sp n="2">
+                        <speaker>BIANCO</speaker>
+                        <p>mite. Non saprei neanche spiegarle bene perch&eacuta;. quel mondo
+                            &egrave; in gran parte scomparso. E fra poco lo sar&agrave; del
+                            tutto.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Non riesco a seguirti, professore.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non c&apostr;&egrave; niente da seguire. Va bene <choice>
+                                <sic>cos&iacuta;</sic>
+                                <corr>cos&igrave;</corr>
+                            </choice>. Le cose che amavo un tempo erano molto fragili. Molto
+                            delicate. Ma io non lo sapevo. Pensavo che fossero indistruttibili. E mi
+                            sbagliavo.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Ed &egrave; questo che ti ha spinto a buttarti <choice>
+                                <sic>gi&uacuta;</sic>
+                                <corr>gi&ugrave;</corr>
+                            </choice> dal binario. Non una questione personale.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Ma <emph>&egrave;</emph> una questione personale. &Egrave; proprio questo
+                            l&apostr;effetto dell&apostr;istruzione. Rende il mondo intero qualcosa
+                            di personale.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Hm.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Cosa, hm?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Niente, stavo solo pensando che sono parole belle forti. Non mi viene in
+                            mente nessuna risposta, e magari la risposta non c&apostr;&egrave; per
+                            niente. Ma comunque devo proprio chiedertelo: a che servono idee del
+                            genere se poi non riescono a farti tenere i piedi incollati per terra
+                            quando arriva il <name>Sunset Limited</name> a centotrenta
+                            all&apostr;ora?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Bella domanda.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Piace pure a me.</p>
+                    </sp>
+                    <sp n="1">
+                        <speaker>BIANCO</speaker>
+                        <p>Neanche io ho una risposta. Forse non c&apostr;&egrave; una logica. Non
+                            lo so. Non me ne importa. Mi &egrave; stato chiesto se mi sembrava
+                            strano il fatto di dover assistere alla morte di ogni cosa, e in effetti
+                            penso che sia strano eccome, ma que</p>
+                    </sp>
+                </spGrp>
+            </div>
+            <div type="page" n="22">
+                <spGrp>
+                    <sp n="2">
+                        <speaker>BIANCO</speaker>
+                        <p>sto non vuol dire che non stia succedendo. Qualcuno deve pur essere
+                            presente.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Ma tu non hai voglia di restare a guardare fino alla fine.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>No, infatti.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Allora, vediamo se ho capito bene. Mi stai dicendo che fra te e il
+                                <name>Sunset Limited</name> non c&apostr;&egrave; mai stato altro
+                            che questa roba culturale.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non &egrave; poco.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Solo che a un certo punto ti &egrave; scoppiata nelle mani.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>S&igrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Cio&egrave; la cultura &egrave; la tua roba.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Se vogliamo. O quantomeno lo era. Forse ha ragione lei. Forse non credo
+                            in niente. Credo nel Sunset Limited.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Cazzo, professore.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Eh s&igrave;, cazzo.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Non credi in niente.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Le cose in cui credevo non esistono <choice>
+                                <sic>pi&uacuta;</sic>
+                                <corr>pi&ugrave;</corr>
+                            </choice>. Sarebbe stupido far finta del contrario. La civilt&agrave;
+                            occidentale &egrave; andata definitivamente in fumo nelle ciminiere di
+                                <name type="place">Dachau</name>, ma io ero troppo infatuato per
+                            accorgermene. Me ne accorgo adesso.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Sei un caso difficile, professore. Lo sapevi?</p>
+                    </sp>
+                </spGrp>
+            </div>
+            <div type="page" n="23">
+                <spGrp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Be&apostr;, non c&apostr;&egrave; motivo per cui lei debba restare
+                            coinvolto nei miei problemi. &Egrave; meglio che me ne vada.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Ce li hai degli amici?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>No.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Non ne hai manco uno?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>No.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Tu mi prendi per il culo, professore. Manco uno?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>No, di amici veri no.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Be&apostr;, parlami di quello <choice>
+                                <sic>l&iacuta;</sic>
+                                <corr>l&igrave;</corr>
+                            </choice>.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Quello <choice>
+                                <sic>l&iacuta;</sic>
+                                <corr>l&igrave;</corr>
+                            </choice> quale?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Quello che non &egrave; un amico vero.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Ho un amico all&apostr;universit&agrave;. Non un amico intimo. Pranziamo
+                            insieme di tanto in tanto.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Ma questo &egrave; il massimo.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>In che senso?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Quanto ad amicizia, questo &egrave; praticamente il massimo che hai.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>S&igrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Mm. Be&apostr;, se questo &egrave; il migliore amico che hai, direi che
+                            lo possiamo considerare il tuo migliore amico. No?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non lo so.</p>
+                    </sp>
+                </spGrp>
+            </div>
+            <div type="page" n="24">
+                <spGrp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Che cosa gli hai fatto?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Che cosa gli ho fatto?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Eh.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non gli ho fatto niente.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Mm hm.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non gli ho fatto niente. Cosa le fa pensare che gli abbia fatto
+                            qualcosa?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Non lo so. Gli hai fatto qualcosa?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>No. Secondo lei cosa dovrei avergli fatto?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Non lo so. Aspetto che me lo dici tu.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Be&apostr;, non c&apostr;&egrave; niente da dire.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Per&ograve; non gli hai lasciato un biglietto n&eacuta; niente. Quando
+                            hai deciso di prendere il treno.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>No.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Al tuo migliore amico?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non &egrave; il mio migliore amico.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Mi pareva che avevamo appena deciso che lo era.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>&Egrave; <emph>lei</emph> che l&apostr;aveva appena deciso.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Gli hai mai detto che ci stavi pensando?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>No.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Cazzo, professore.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Perch&eacuta; avrei dovuto?</p>
+                    </sp>
+                </spGrp>
+            </div>
+            <div type="page" n="25">
+                <spGrp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Non lo so. Magari <choice>
+                                <sic>perch&egrave;</sic>
+                                <corr>perch&eacuta;</corr>
+                            </choice> &egrave; il tuo migliore amico?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Gliel&apostr;ho detto. Non siamo tanto intimi.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Non siete tanto intimi.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>No.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>&Egrave; il tuo migliore amico solo che non siete tanto intimi.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Se <choice>
+                                <sic>cos&iacuta;</sic>
+                                <corr>cos&igrave;</corr>
+                            </choice> vogliamo dire.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Non al punto di starlo ad annoiare parlandogli di una fesseria come la
+                            morte.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <stage who="speaker">(girando lo sguardo per la stanza)</stage>
+                        <p>Senta. Diciamo che le do la mia parola che me ne vado a casa senza
+                            cercare di ammazzarmi durante il tragitto.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Diciamo che ti do la mia parola che queste stronzate non le sto manco a
+                            sentire.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>E allora cosa sono, suo prigioniero?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Ma figurati. E comunque, tu eri prigioniero da prima di venire qui. Anzi,
+                            eri un condannato a morte. Che faceva tuo padre?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Cosa?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Ti ho chiesto che faceva tuo padre. Di mestiere.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Era avvocato.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Avvocato.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>S&igrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>E che tipo di cause trattava?</p>
+                    </sp>
+                </spGrp>
+            </div>
+            <div type="page" n="26">
+                <spGrp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Lavorava per il governo. Non si occupava di diritto penale e cose
+                            simili.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Mm hm. E quale sarebbe una cosa <emph>simile</emph> al diritto
+                            penale?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non lo so. Le cause del divorzio, forse.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Giusto. Mi sa che hai ragione. E di cosa &egrave; morto?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Che ne sa, lei, che &egrave; morto?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>&Egrave; morto?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>S&igrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>E di cosa?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Di cancro.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Di cancro. Quindi &egrave; stato male per un bel pezzo.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>S&igrave;, infatti.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>E tu lo andavi a trovare?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>No.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Come mai?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non volevo.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Be&apostr;, e come mai non volevi?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non lo so. Non mi andava, punto e basta. Forse non volevo ricordarmelo in
+                            quello stato.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Cazzate. Lui te lo chiedeva di andarci?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>No.</p>
+                    </sp>
+                </spGrp>
+            </div>
+            <div type="page" n="27">
+                <spGrp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Ma tua madre S&igrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Forse S&igrave;. Non me lo ricordo.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Su, professore. Tua madre te lo chiedeva.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Ok. &Egrave; vero.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>E tu cosa le rispondevi?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Le dicevo che ci sarei andato.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Ma non ci sei andato mai.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>No.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Perch&eacuta;?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>&Egrave; morto.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>S&igrave;, ma non &egrave; per questo. Il tempo per andarlo a trovare
+                            l&apostr;hai avuto, per&ograve; non l&apostr;hai mai fatto.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Diciamo <choice>
+                                <sic>cos&iacuta;</sic>
+                                <corr>cos&igrave;</corr>
+                            </choice>.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Hai aspettato finch&eacuta; non &egrave; morto.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>E va bene. Non sono andato a trovare mio padre.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Tuo padre se ne sta steso sul letto a morire di cancro. Tua madre
+                            &egrave; seduta <choice>
+                                <sic>l&iacuta;</sic>
+                                <corr>l&igrave;</corr>
+                            </choice> con lui. Gli tiene la mano. Lui sente male da tutte le parti.
+                            E ti chiedono di andarlo a trovare un&apostr;ultima volta prima che
+                            muore e tu gli dici no.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Se la vuole mettere <choice>
+                                <sic>cos&iacuta;</sic>
+                                <corr>cos&igrave;</corr>
+                            </choice>.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Be&apostr;, tu come la metteresti?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non lo so.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>&Egrave; <choice>
+                                <sic>cos&iacuta;</sic>
+                                <corr>cos&igrave;</corr>
+                            </choice> che <emph>&egrave; andata</emph>. O no?</p>
+                    </sp>
+                </spGrp>
+            </div>
+            <div type="page" n="28">
+                <spGrp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Immagino di S&igrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>No, non immaginare. &Egrave; andata <choice>
+                                <sic>cos&iacuta;</sic>
+                                <corr>cos&igrave;</corr>
+                            </choice> o no?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>S&igrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Bene. Aspetta che vedo se trovo l&apostr;orario della metropolitana.</p>
+                    </sp>
+                </spGrp>
+                <stage>Apre il cassetto del tavolo e ci fruga dentro. </stage>
+                <spGrp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Vediamo quando passa il prossimo treno.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non ci trovo niente da ridere.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Menomale che dici <choice>
+                                <sic>cos&iacuta;</sic>
+                                <corr>cos&igrave;</corr>
+                            </choice>, professore. Perch&eacuta; non ci trovo niente da ridere manco
+                            io. &Egrave; solo che ogni minuto che passa mi meraviglio di <choice>
+                                <sic>pi&uacuta;</sic>
+                                <corr>pi&ugrave;</corr>
+                            </choice>. Ma possibile che non ti <emph>vedi</emph>, zuccherino? Sei
+                            trasparente come il vetro. Vedo le rotelline che ti girano dentro la
+                            testa. Gli ingranaggi. E vedo anche la luce. Una luce buona. Una luce
+                            vera. Tu non la vedi?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>No, non la vedo.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Be&apostr;, che Dio ti benedica, fratello. Che Dio ti benedica e
+                            t&apostr;assista. Perch&eacuta; la luce c&apostr;&egrave;.</p>
+                    </sp>
+                </spGrp>
+                <stage>Restano seduti. </stage>
+                <spGrp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Quando &egrave; stato in prigione?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Tanto tempo fa.</p>
+                    </sp>
+                </spGrp>
+            </div>
+            <div type="page" n="29">
+                <spGrp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Per che cosa?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Omicidio.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Davvero?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>E chi direbbe di essere stato dentro per omicidio se non fosse vero?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Prima l&apostr;ha chiamata galera.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Ah S&igrave;?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Di solito i neri il carcere lo chiamano galera?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>No. Solo noi vecchi negri di campagna. Abbiamo un po&apostr; il chiodo
+                            fisso di chiamare le cose per quello che sono. Non ci voglio neanche
+                            pensare a quanti nomi esistono per la galera. Figuriamoci starli a
+                            contare.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>E ha tante storie di galera?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Storia di galera.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>S&igrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Non lo so. Una volta qualche storia di galera la raccontavo, ma adesso
+                            hanno perso parecchio fascino. Magari dovremmo parlare di qualcosa di <choice>
+                                <sic>pi&uacuta;</sic>
+                                <corr>pi&ugrave;</corr>
+                            </choice> allegro.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>&Egrave; mai stato sposato?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Sposato.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>S&igrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <stage who="speaker">(sottovoce)</stage>
+                        <p>Oddio.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Che c&apostr;&egrave;?</p>
+                    </sp>
+                </spGrp>
+            </div>
+            <div type="page" n="30">
+                <spGrp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Tutto sommato, forse ci conviene tornare alle storie di galera. <stage
+                                who="speaker">(Scuote la testa e ride in silenzio. Si stringe il
+                                naso fra le dita, tenendo gli occhi chiusi).</stage> Oh, santo
+                            cielo.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Ha figli?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>No, professore. Non ho nessuno. Nella mia famiglia sono morti tutti.
+                            Avevo due ragazzi. Sono morti da anni. Ormai quasi tutti quelli che ho
+                            conosciuto sono morti, se &egrave; per questo. E la voca dovrebbe darsi
+                            da pensare. Potrei essere dannoso per la tua salute.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>&Egrave; sempre stato in mezzo ai guai?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Proprio <choice>
+                                <sic>cos&iacuta;</sic>
+                                <corr>cos&igrave;</corr>
+                            </choice>. Mi piaceva. Forse mi piace ancora. Mi sono fatto sette anni
+                            di carcere duro e fortuna che non me ne sono beccati molti di <choice>
+                                <sic>pi&uacuta;</sic>
+                                <corr>pi&ugrave;</corr>
+                            </choice>. Ho fatto male a un sacco di gente. Li strapazzavo e un
+                            po&apostr; e quelli non si rialzavano <choice>
+                                <sic>pi&uacuta;</sic>
+                                <corr>pi&ugrave;</corr>
+                            </choice>.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Per&ograve; adesso non si mette pi&ugrave; nei guai.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>No.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Ma le piace comunque?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Be&apostr;, forse per me &egrave; una specie di condanna. Il mio stesso
+                            karma mi prende a calci in culo. Ma ora sono passato dall&apostr;altra
+                            parte. Se vuoi aiutare chi &egrave; nei guai, devi andare dove stanno i
+                            guai. C&apostr;&egrave; poco da scegliere.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>E lei vuole aiutare chi &egrave; nei guai.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>S&igrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>E perch&eacuta;?</p>
+                    </sp>
+                </spGrp>
+            </div>
+            <div type="page" n="31">
+                <stage>Il nero piega la testa da un lato e lo osserva. </stage>
+                <spGrp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Non sei ancora pronto.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Allora mi dia solo la risposta pi&ugrave; breve.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>&Egrave; questa la risposta pi&ugrave; breve.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Da quanto tempo sta qui?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Vuoi dire in questo palazzo?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>S&igrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Sei anni. Quasi sette.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non capisco come mai abita qui.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Qui invece che dove?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>In qualunque posto.</p>
+                    </sp>
+                    <sp n="1">
+                        <speaker>NERO</speaker>
+                        <p>Be&apostr;, di fatto direi che questo &egrave; un qualunque posto. Potrei
+                            anche abitare in un altro palazzo, d&apostr;accordo. Ma questo qui mi va
+                            bene. Ho una camera da letto per starmene un po&apostr; in pace. E <choice>
+                                <sic>l&iacuta;</sic>
+                                <corr>l&igrave;</corr>
+                            </choice> c&apostr;&egrave; un divano dove la gente pu&ograve; buttarsi
+                            a dormire. Tossici e crackomani, <choice>
+                                <sic>perlopi&uacuta;</sic>
+                                <corr>perlopi&ugrave;</corr>
+                            </choice>. Che mango a dirlo ti soffiamo tutto quello che possono
+                            portarsi appresso, perci&ograve; non possiedo un bel niente. E va bene <choice>
+                                <sic>cos&iacuta;</sic>
+                                <corr>cos&igrave;</corr>
+                            </choice>. Basta che frequenti la gente giusta e vedi che alla fine le
+                            voglie ti passano tutte. Una volta si sono rubati perfino il frigo, ma
+                            qualcuno li ha beccati sulle scale e gliel&apostr;ha fatto riportare su.
+                            Adesso ho quel bestione enorme che vedi <choice>
+                                <sic>laggi&uacuta;</sic>
+                                <corr>laggi&ugrave;</corr>
+                            </choice>. Al posto di quell&apostr;altro. L&apostr;unica cosa che mi
+                            manca &egrave; la musica. Mi voglio comprare una blindata per</p>
+                    </sp>
+                </spGrp>
+            </div>
+            <div type="page" n="32">
+                <spGrp>
+                    <sp n="2">
+                        <speaker>NERO</speaker>
+                        <p>la camera da letto. A quel punto posso ricominciare a sentirmi un
+                            po&apostr; di musica. Per&ograve; bisogna cambiare la porta e pure il
+                            telaio. Ci sto lavorando. Della televisione non me ne frega niente, ma
+                            la musica mi manca.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Non le sembra un posto orrendo, questo?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Orrendo?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>S&igrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Cos&apostr;ha di orrendo?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>&Egrave; orrendo. Ci si vive una vita orrenda.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Una vita orrenda?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>S&igrave;.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Che cazzo, professore. Questa non &egrave; una vita orrenda. Ma che
+                            dici?</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Questo posto. &Egrave; un posto orrendo. Pieno di gente orrenda.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Oh santo cielo.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Lo capir&agrave; anche lei che questo non &egrave; gente che vale la pena
+                            salvare. Anche se uno la potesse salvare. E non la si pu&ograve;
+                            salvare. Questo lo capir&agrave; anche lei.</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Be&apostr;, non ho mai detto di no alle sfide. In carcere, prima di
+                            uscire, ho cominciato a organizzare delle funzioni religiose. Quella
+                            S&igrave; che era una sfida. A un sacco di quelli che venivano in
+                            realt&agrave; non gliene fregava niente. Non gliene poteva sbattere di
+                            meno della parola di Dio. Volevano solo che gli facesse curriculum.</p>
+                    </sp>
+                </spGrp>
+            </div>
+            <div type="page" n="33">
+                <spGrp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Curriculum?</p>
+                    </sp>
+                    <sp>
+                        <speaker>NERO</speaker>
+                        <p>Curriculum. L&agrave; dentro c&apostr;erano <soCalled>fratelli</soCalled>
+                            che ne avevano combinate di tutti i colori, e non gli dispiaceva di un
+                            cazzo a parte che si erano fatti beccare. Ovviamente la cosa assurda era
+                            che tanti credevano veramente in Dio. Forse pure di <choice>
+                                <sic>pi&uacuta;</sic>
+                                <corr>pi&ugrave;</corr>
+                            </choice> di quelli che stanno fuori. Per me era <choice>
+                                <sic>cos&iacuta;</sic>
+                                <corr>cos&igrave;</corr>
+                            </choice>, almeno. Ti consiglio di rifletterci su, professore.</p>
+                    </sp>
+                    <sp>
+                        <speaker>BIANCO</speaker>
+                        <p>Penso che sia meglio che vada.</p>
+                    </sp>
+                </spGrp>
+                <p>[...]</p>
+            </div>
+        </body>
+        <back/>
+    </text>
+</TEI>
