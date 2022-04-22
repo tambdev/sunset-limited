@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "alertifyjs": "^1.11.0",
-    "fullpage.js": "^2.9.5",
+    "fullpage.js": "^4.0.5",
     "hover.css": "^2.2.1",
     "normalize.css": "^7.0.0",
     "skeleton-css": "^2.0.4",
